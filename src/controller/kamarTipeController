@@ -1,0 +1,9 @@
+// controllers/kamarTipeController.js
+const kamarTipeModel = require('../models/kamarTipeModel');
+
+exports.getTotalKamarPerTipe = (req, res) => {
+    kamarTipeModel.getTotalKamarPerTipe((err, results) => {
+        if (err) return res.status(500).json({ message: err.sqlMessage });
+        res.status(200).json({ total_kamar_per_tipe: results });
+    });
+};

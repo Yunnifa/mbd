@@ -1,0 +1,7 @@
+// models/kamarTipeModel.js
+const db = require('../config/database');
+
+exports.getTotalKamarPerTipe = (callback) => {
+    const query = 'SELECT * FROM view_total_kamar_per_tipe';
+    db.query(query, [], callback);
+};

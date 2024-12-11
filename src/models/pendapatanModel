@@ -1,0 +1,7 @@
+// models/pendapatanModel.js
+const db = require('../config/database');
+
+exports.getTotalPendapatan = (callback) => {
+    const query = 'SELECT * FROM view_total_pendapatan';
+    db.query(query, [], callback);
+};

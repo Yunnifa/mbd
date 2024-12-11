@@ -1,0 +1,8 @@
+// routes/kamarTipeRoutes.js
+const express = require('express');
+const router = express.Router();
+const kamarTipeController = require('../controllers/kamarTipeController');
+
+router.get('/', kamarTipeController.getTotalKamarPerTipe);
+
+module.exports = router;

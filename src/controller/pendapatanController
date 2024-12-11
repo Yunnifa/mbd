@@ -1,0 +1,9 @@
+// controllers/pendapatanController.js
+const pendapatanModel = require('../models/pendapatanModel');
+
+exports.getTotalPendapatan = (req, res) => {
+    pendapatanModel.getTotalPendapatan((err, results) => {
+        if (err) return res.status(500).json({ message: err.sqlMessage });
+        res.status(200).json({ total_pendapatan: results });
+    });
+};
